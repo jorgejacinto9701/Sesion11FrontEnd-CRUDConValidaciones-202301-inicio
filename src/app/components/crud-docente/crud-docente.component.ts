@@ -8,8 +8,6 @@ import { Ubigeo } from 'src/app/models/ubigeo.model';
 import { DocenteService } from 'src/app/services/docente.service';
 import { UbigeoService } from 'src/app/services/ubigeo.service';
 import Swal from 'sweetalert2'
-import { CrudDocenteAddComponent } from '../crud-docente-add/crud-docente-add.component';
-import { CrudDocenteUpdateComponent } from '../crud-docente-update/crud-docente-update.component';
 
 @Component({
   selector: 'app-crud-docente',
@@ -45,13 +43,13 @@ export class CrudDocenteComponent implements OnInit {
   
   openAddDialog() {
     console.log(">>> openAddDialog  >>");
-    const dialogRef = this.dialogService.open(CrudDocenteAddComponent);
+    /*const dialogRef = this.dialogService.open(CrudDocenteAddComponent);
     dialogRef.afterClosed().subscribe(result => {
         console.log(">>> result >> " + result);
         if (result === 1) {
             this.refreshTable();
         }
-    });
+    });*/
   }
 
  ngOnInit(): void {}
@@ -102,13 +100,13 @@ export class CrudDocenteComponent implements OnInit {
     console.log(">>> distrito >>  " + obj.ubigeo?.distrito);
 
 
-    const dialogRef = this.dialogService.open(CrudDocenteUpdateComponent, {data:obj});
+    /*const dialogRef = this.dialogService.open(CrudDocenteUpdateComponent, {data:obj});
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 1) {
             this.refreshTable();
       }
-    });
+    });*/
    
 }
 
